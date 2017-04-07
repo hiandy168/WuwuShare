@@ -1,0 +1,21 @@
+.publishPahe{
+    margin: 10px;
+}
+.publishInfoView{
+    margin: 10px 0;
+    padding: 3px;
+    border: 1px solid #eee;
+}
+
+.publishInfoView>textarea{
+     width: 100%;
+}
+
+.PublishPicView{
+}
+
+.PublishPic{
+    width: 25%;
+    height: 100px;
+    margin: 10px;
+}

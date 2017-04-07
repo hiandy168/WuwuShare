@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+<scroll-view scroll-y="true">
+
+<view class="searchInputView">
+  <icon type="search"/>
+  <input placeholder="请输入所需物品名称" confirm-type="search" class="searchInput" placeholder-class="searchPlaceholder"/>
+</view>
+
+<view class="indexSharePanel">
+  <view class="shareTh">
+    <image src="../../img/shareTh.jpg"></image>
+    <text>小米mix</text>
+    <text>租金：400积分</text>
+  </view>
+  <view class="shareTh">
+    <image src="../../img/shareTh.jpg"></image>
+    <text>小米mix</text>
+    <text>租金：400积分</text>
+  </view>
+  <view class="shareTh">
+    <image src="../../img/shareTh.jpg"></image>
+    <text>小米mix</text>
+    <text>租金：400积分</text>
+  </view>
+  <view class="shareTh">
+    <image src="../../img/shareTh.jpg"></image>
+    <text>小米mix</text>
+    <text>租金：400积分</text>
+  </view>
+</view>
+
+</scroll-view>
+</view>

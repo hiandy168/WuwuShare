@@ -1,0 +1,50 @@
+.searchInputView{
+  flex-direction: row;
+  border: 1px solid #ffd344;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.searchInputView>icon{
+  display: inline-block;
+  margin:0 10px;
+  width: 20px;
+  height: 20px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+
+.searchInput{
+  display: inline-block;
+  line-height: 20px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.searchPlaceholder{
+  text-align: center;
+}
+
+.indexSharePanel{
+  margin: 10px;
+}
+
+.shareTh{
+  flex-direction: column;
+  background: #eee;
+  color: #333;
+  padding: 4px;
+  border-radius: 10px;
+  margin:10px 0;
+}
+
+.shareTh>image{
+  width: 100%;
+  text-align: center;
+}
+
+.shareTh>text{
+  display: block;
+  margin: 5px 5px 5px 5px;
+}

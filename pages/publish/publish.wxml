@@ -1,0 +1,24 @@
+<view class="publishPahe">
+<scroll-view scroll-y="true">
+    <view class="publishInfoView">
+        <input placeholder="请输入名称 品牌型号等等" />
+    </view>
+    <view class="publishInfoView">
+        <textarea  placeholder="请简述您的物品" maxlength="-1"/> 
+    </view>
+    <view class="publishInfoView">
+        <input placeholder="请输入租金" />
+    </view>
+        <view class="publishInfoView">
+        <input placeholder="请输入押金" />
+    </view>
+    <view class="publishInfoView">
+        <input placeholder="请输入您的联系方式" />
+    </view>
+    <text style="color:#333">请添加至少一张图片</text>
+    <view class="PublishPicView">
+        <image src="../../img/addPic.png" class="PublishPic" bindtap="addPic"></image>
+    </view>
+</scroll-view>
+<button type="primary" bindtap="publish" class="publishBtn">发布</button>
+</view>

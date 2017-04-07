@@ -1,0 +1,25 @@
+<view class="classname">
+<view class="userHeader">
+    <image src="../../img/user.png"></image>
+    <view>1231</view>
+</view>
+    
+<scroll-view scroll-y="true" class="userPageListPanel">
+    <view class="userPageList">
+        <image src="../../img/userIcon.png" class="userListIcon"></image>
+        <text class="">个人信息</text>
+    </view>
+    <view class="userPageList">
+        <image src="../../img/publish_little.png" class="userListIcon"></image>
+        <text class="">我的发布</text>
+    </view>
+    <view class="userPageList">
+        <image src="../../img/rentIcon.png" class="userListIcon"></image>
+        <text class="">我的租用</text>
+    </view>
+    <view class="userPageList">
+        <image src="../../img/countIcon.png" class="userListIcon"></image>
+        <text class="">我的积分</text>
+    </view>
+</scroll-view>
+</view>
