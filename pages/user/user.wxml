@@ -1,25 +1,26 @@
 <view class="classname">
 <view class="userHeader">
     <image src="../../img/user.png"></image>
-    <view>1231</view>
+    <view class="username">{{username}}</view>
 </view>
     
 <scroll-view scroll-y="true" class="userPageListPanel">
-    <view class="userPageList">
+    <view class="userPageList" bindtap="toUserInfo">
         <image src="../../img/userIcon.png" class="userListIcon"></image>
         <text class="">个人信息</text>
     </view>
-    <view class="userPageList">
+    <view class="userPageList" bindtap="toMyPublish">
         <image src="../../img/publish_little.png" class="userListIcon"></image>
         <text class="">我的发布</text>
     </view>
-    <view class="userPageList">
+    <view class="userPageList" bindtap="toMyRent">
         <image src="../../img/rentIcon.png" class="userListIcon"></image>
         <text class="">我的租用</text>
     </view>
     <view class="userPageList">
         <image src="../../img/countIcon.png" class="userListIcon"></image>
-        <text class="">我的积分</text>
+        <text class="">我的积分</text><text style="float:right;color:#e4393c">{{count}}</text>
+        <image src="../../img/points.png" style="float:right;width:40px;height:40px;padding-right:3px"></image>
     </view>
 </scroll-view>
 </view>

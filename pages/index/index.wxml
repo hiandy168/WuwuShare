@@ -3,30 +3,17 @@
 <scroll-view scroll-y="true">
 
 <view class="searchInputView">
-  <icon type="search"/>
+    <image src="../../img/search.png"></image>
   <input placeholder="请输入所需物品名称" confirm-type="search" class="searchInput" placeholder-class="searchPlaceholder"/>
 </view>
 
 <view class="indexSharePanel">
-  <view class="shareTh">
-    <image src="../../img/shareTh.jpg"></image>
-    <text>小米mix</text>
-    <text>租金：400积分</text>
-  </view>
-  <view class="shareTh">
-    <image src="../../img/shareTh.jpg"></image>
-    <text>小米mix</text>
-    <text>租金：400积分</text>
-  </view>
-  <view class="shareTh">
-    <image src="../../img/shareTh.jpg"></image>
-    <text>小米mix</text>
-    <text>租金：400积分</text>
-  </view>
-  <view class="shareTh">
-    <image src="../../img/shareTh.jpg"></image>
-    <text>小米mix</text>
-    <text>租金：400积分</text>
+  <view class="shareTh"  bindtap="toDetail" wx:for="{{listData}}" data-itemid= "{{item.id}}">
+    <view class="" style="display:none">{{item}}</view>
+    <image src="{{item.img}}"></image>
+    <text>{{item.name}}</text>
+    <text>压金：{{item.rent}}积分</text>
+    <text>租金：{{item.preRent}}/天</text>
   </view>
 </view>
 

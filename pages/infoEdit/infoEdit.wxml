@@ -1,0 +1,32 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class="">
+<view class="editInfoListPanel">
+    <scroll-view scroll-y="true" class="">
+
+        <view class="editInfoList">
+            <text>姓名</text><input  value="{{name}}" bindblur="editNameBlur"/>
+        </view>
+        <view class="editInfoList">
+            <radio-group class="radio-group" bindchange="editSexChange">
+                <label class="radio">
+                    <radio value="男" checked="{{sex}}=='男'"/>男
+                </label>
+                <label class="radio">
+                    <radio value="女" checked="{{sex}}=='女'"/>女
+                </label>
+            </radio-group>
+        </view>
+        <view class="editInfoList">
+            <text>年龄</text><input  value="{{age}}" bindblur="editAgeBlur"/>
+        </view>
+        <view class="editInfoList">
+            <text>电话</text><input  value="{{tel}}" bindblur="editTelBlur"/>
+        </view>
+        <view class="editInfoList">
+            <text>地址</text><input  value="{{address}}" bindblur="editAddBlur"/>
+        </view>
+    </scroll-view>
+</view>
+    <button class="btnOnbottom" bindtap="saveEdit">确定</button>
+
+</view>

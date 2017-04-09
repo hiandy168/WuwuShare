@@ -1,0 +1,44 @@
+
+<view class="">
+<view class="MyRentView">
+
+    <scroll-view scroll-y="true">
+
+        <view class="MyRentList">
+            <view class="mrlLeft">
+                <view>小米mix</view>
+                <view>押金:<text>400</text></view>
+                <view>租金:<text>20</text>/天</view>
+            </view>
+            <view class="mrlRight">
+                <image src="../../img/shareTh.jpg"></image>
+            </view>
+        </view>
+
+        <view class="MyRentList">
+            <view class="mrlLeft">
+                <view>小米mix</view>
+                <view>押金:<text>400</text></view>
+                <view>租金:<text>20</text>/天</view>
+            </view>
+            <view class="mrlRight">
+                <image src="../../img/shareTh.jpg"></image>
+            </view>
+        </view>
+
+        <view class="MyRentList">
+            <view class="mrlLeft">
+                <view>小米mix</view>
+                <view>押金:<text>400</text></view>
+                <view>租金:<text>20</text>/天</view>
+            </view>
+            <view class="mrlRight">
+                <image src="../../img/shareTh.jpg"></image>
+            </view>
+        </view>
+
+    </scroll-view>
+
+</view>
+
+</view>

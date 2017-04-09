@@ -1,0 +1,31 @@
+/* pages/userInfo/userInfo.wxss */
+.userInfoListPanel{
+    margin: 0 10px;
+    margin-bottom: 50px;
+}
+.userInfoList{
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+    color: #333;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.userInfoText{
+    float: right;
+    color: #ffd344;
+}
+
+.userInfoView{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+}
+
+.userInfoBtn{
+      background: #ffd344;
+      color: white;
+      height: 50px;
+      width: 50%;
+      float: left
+}

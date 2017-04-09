@@ -1,0 +1,30 @@
+/* pages/myPublish/myPublish.wxss */
+.MyPublishView{
+    margin: 10px 10px 0 10px;
+}
+.MyPublishList{
+    height: 80px;
+    background: #eee;
+    margin-bottom: 5px;
+}
+
+.mplRight>image{
+    height: 80px;
+    width: 100px;
+}
+
+.mplLeft{
+    float: left;
+}
+
+.mplLeft>view{
+    padding: 2px;
+}
+
+.mplLeft text{
+    color: #e4393c;
+}
+
+.mplRight{
+    float: right;
+}

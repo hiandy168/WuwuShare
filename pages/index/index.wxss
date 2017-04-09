@@ -3,23 +3,23 @@
   border: 1px solid #ffd344;
   margin: 10px;
   border-radius: 10px;
+  line-height: 40px;
+  height: 40px;
+  vertical-align: middle;
 }
 
-.searchInputView>icon{
+.searchInputView>image{
   display: inline-block;
-  margin:0 10px;
-  width: 20px;
-  height: 20px;
-  line-height: 40px;
-  vertical-align: middle;
+  margin: 5px 10px;
+  width: 30px;
+  height: 30px;
 }
 
 
 .searchInput{
   display: inline-block;
-  line-height: 20px;
   height: 40px;
-  vertical-align: middle;
+  width: 80%;
 }
 
 .searchPlaceholder{

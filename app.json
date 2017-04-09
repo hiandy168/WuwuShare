@@ -3,7 +3,11 @@
     "pages/index/index",
     "pages/publish/publish",
     "pages/user/user",
-    "pages/detailr/detail"
+    "pages/detail/detail",
+    "pages/userInfo/userInfo",
+    "pages/infoEdit/infoEdit",
+    "pages/myPublish/myPublish",
+    "pages/myRent/myRent"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,24 +1,27 @@
-<view class="publishPahe">
+<view class="">
+<view class="publishPanel">
 <scroll-view scroll-y="true">
     <view class="publishInfoView">
-        <input placeholder="请输入名称 品牌型号等等" />
+        <input placeholder="请输入名称 品牌型号等等" bindblur="publishNameBlur"/>
     </view>
     <view class="publishInfoView">
-        <textarea  placeholder="请简述您的物品" maxlength="-1"/> 
+        <textarea  placeholder="请简述您的物品" maxlength="-1" bindblur="publishDescBlur"/> 
     </view>
     <view class="publishInfoView">
-        <input placeholder="请输入租金" />
+        <input placeholder="请输入租金" bindblur="publishRentBlur"/>
     </view>
         <view class="publishInfoView">
-        <input placeholder="请输入押金" />
+        <input placeholder="请输入押金" bindblur="publishPrerentBlur"/>
     </view>
     <view class="publishInfoView">
-        <input placeholder="请输入您的联系方式" />
+        <input placeholder="请输入您的联系方式" bindblur="publishTelBlur"/>
     </view>
     <text style="color:#333">请添加至少一张图片</text>
     <view class="PublishPicView">
+        <image src="{{item}}" class="PublishPic" wx:for="{{img}}"></image>
         <image src="../../img/addPic.png" class="PublishPic" bindtap="addPic"></image>
     </view>
 </scroll-view>
-<button type="primary" bindtap="publish" class="publishBtn">发布</button>
+</view>
+<button bindtap="publish" class="btnOnbottom">发布</button>
 </view>

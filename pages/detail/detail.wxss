@@ -1,0 +1,21 @@
+.detailView{
+    margin: 0 10px 50px 10px;
+}
+
+.detailPicView>image{
+    width: 100%;
+}
+
+.detailList{
+    border-bottom: 1px solid #999;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.detailListIcon{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 10px 0 0;
+}

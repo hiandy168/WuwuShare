@@ -1,0 +1,30 @@
+
+.MyRentView{
+    margin: 10px 10px 0 10px;
+}
+.MyRentList{
+    height: 80px;
+    background: #eee;
+    margin-bottom: 5px;
+}
+
+.mrlRight>image{
+    height: 80px;
+    width: 100px;
+}
+
+.mrlLeft{
+    float: left;
+}
+
+.mrlLeft>view{
+    padding: 2px;
+}
+
+.mrlLeft text{
+    color: #e4393c;
+}
+
+.mrlRight{
+    float: right;
+}

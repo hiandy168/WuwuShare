@@ -1,4 +1,4 @@
-// pages/detailr/detail.js
+// pages/myPublish/myPublish.js
 Page({
   data:{},
   onLoad:function(options){

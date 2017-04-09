@@ -1,30 +1,33 @@
 //app.js
 App({
   onLaunch: function () {
-    //调用API从本地缓存中获取数据
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-  },
-  getUserInfo:function(cb){
-    var that = this
-    if(this.globalData.userInfo){
-      typeof cb == "function" && cb(this.globalData.userInfo)
-    }else{
-      //调用登录接口
-      wx.login({
-        success: function () {
-          wx.getUserInfo({
-            success: function (res) {
-              that.globalData.userInfo = res.userInfo
-              typeof cb == "function" && cb(that.globalData.userInfo)
-            }
-          })
-        }
-      })
-    }
+    //  var that = this
+    // wx.login({
+    //   success: function (res) {
+    //     var appId = 'wxac0b300c9c488825';//微信公众号平台申请的appid
+    //     var appSecret = '9de6a323bfeda49725acbcac826d8e44';//微信公众号平台申请的app secret
+    //     var js_code = res.code;//调用登录接口获得的用户的登录凭证code
+    //     wx.request({
+    //       url: 'https://api.weixin.qq.com/sns/jscode2session?appid='+appId+'&secret='+appSecret+'&js_code='+js_code+'&grant_type=authorization_code',
+    //       data: {},
+    //       method: 'GET',
+    //       success: function (res) {
+    //         console.log(res);
+    //         var openid = res.data.openid //返回的用户唯一标识符openid
+    //         console.log(openid)
+    //         console.log("试试吧上面就是获得的openid")
+    //       }
+    //     })
+    //   }
+    // })
   },
   globalData:{
-    userInfo:null
+    userInfo:{
+      name:"jianjian",
+      age:"21",
+      address:"江西省南昌市华东交通大学",
+      sex:"男",
+      tel:"10086"
+    }
   }
 })

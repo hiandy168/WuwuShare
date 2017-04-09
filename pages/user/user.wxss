@@ -15,6 +15,10 @@
     margin: 5px;
 }
 
+.username{
+    padding-bottom: 10px;
+}
+
 .userPageListPanel{
     width: 96%;
     margin: 30px auto 0 auto;

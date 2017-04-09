@@ -1,0 +1,17 @@
+/* pages/infoEdit/infoEdit.wxss */
+.editInfoListPanel{
+    margin: 10px;
+}
+
+.editInfoList{
+    padding: 3px;
+    font-size: 20px;
+    color: #333;
+    line-height: 40px;
+    vertical-align: middle;
+    margin: 5px 0;
+}
+
+.editInfoList>input{
+    border-bottom : 1px solid #eee;
+}

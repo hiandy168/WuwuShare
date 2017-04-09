@@ -1,0 +1,25 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class="">
+<view class="userInfoListPanel">
+    <scroll-view scroll-y="true" class="">
+
+        <view class="userInfoList">
+            <text class="">用户名</text><text class="userInfoText">{{name}}</text>
+        </view>
+        <view class="userInfoList">
+            <text class="">性别</text><text class="userInfoText">{{sex}}</text>
+        </view>
+        <view class="userInfoList">
+            <text class="">年龄</text><text class="userInfoText">{{age}}</text>
+        </view>
+        <view class="userInfoList">
+            <text class="">电话</text><text class="userInfoText">{{tel}}</text>
+        </view>
+        <view class="userInfoList">
+            <text class="">地址</text><text class="userInfoText">{{address}}</text>
+        </view>
+    </scroll-view>
+</view>
+        <button class="btnOnbottom" bindtap="toEditInfo">修改信息</button>
+
+</view>
