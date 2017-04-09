@@ -7,7 +7,9 @@
     "pages/userInfo/userInfo",
     "pages/infoEdit/infoEdit",
     "pages/myPublish/myPublish",
-    "pages/myRent/myRent"
+    "pages/myRent/myRent",
+    "pages/myPublishInfo/myPublishInfo",
+    "pages/myPublishInfoEdit/myPublishInfoEdit"
   ],
   "window":{
     "backgroundTextStyle":"light",

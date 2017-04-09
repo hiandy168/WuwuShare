@@ -74,5 +74,26 @@ Page({
       title:"提交数据",
       content:"名称："+this.data.name
     })
+  },
+  delImg:function(event){
+    var that = this;
+    wx.showModal({
+      title:"删除图片？",
+      success:function(res){
+        if(res.confirm){
+          console.log(event.currentTarget.dataset.id);
+          for(var i=0;i<that.data.img.length;i++){
+            if(that.data.img[i]==event.currentTarget.dataset.id){
+                for(var j = i;j<that.data.img.length;j++){
+                  that.data.img[j]=that.data.img[j+1];
+                }
+                that.data.img.length=that.data.img.length-1;;
+                console.log(that.data.img);
+                return;
+            }
+          }
+        }
+      }
+    })
   }
 })

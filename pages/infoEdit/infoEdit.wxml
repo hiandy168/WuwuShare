@@ -9,10 +9,10 @@
         <view class="editInfoList">
             <radio-group class="radio-group" bindchange="editSexChange">
                 <label class="radio">
-                    <radio value="男" checked="{{sex}}=='男'"/>男
+                    <radio value="男" checked="{{sex=='男'}}"/>男
                 </label>
                 <label class="radio">
-                    <radio value="女" checked="{{sex}}=='女'"/>女
+                    <radio value="女" checked="{{sex=='女'}}"/>女
                 </label>
             </radio-group>
         </view>

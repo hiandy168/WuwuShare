@@ -3,7 +3,8 @@
 <view class="MyPublishView">
 
     <scroll-view scroll-y="true">
-        <view class="MyPublishList">
+
+        <view class="MyPublishList" bindtap="toPublishInfo">
             <view class="mplLeft">
                 <view>小米mix</view>
                 <view>押金:<text>400</text></view>

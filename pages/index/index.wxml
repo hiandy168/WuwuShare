@@ -12,7 +12,7 @@
     <view class="" style="display:none">{{item}}</view>
     <image src="{{item.img}}"></image>
     <text>{{item.name}}</text>
-    <text>压金：{{item.rent}}积分</text>
+    <text>押金：{{item.rent}}积分</text>
     <text>租金：{{item.preRent}}/天</text>
   </view>
 </view>

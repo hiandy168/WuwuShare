@@ -7,3 +7,7 @@
       height: 50px;
       width: 100%;
 }
+
+.importentText{
+      color: #e4393c;
+}

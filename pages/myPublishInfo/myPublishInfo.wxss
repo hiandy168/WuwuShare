@@ -1,3 +1,4 @@
+/* pages/myPublishInfo/myPublishInfo.wxss */
 .detailView{
     margin: 10px 10px 50px 10px;
 }
@@ -8,6 +9,11 @@
 
 .detailList{
     border-bottom: 1px solid #999;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.descItem{
     line-height: 40px;
     vertical-align: middle;
 }
