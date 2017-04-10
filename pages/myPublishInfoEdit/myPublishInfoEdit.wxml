@@ -1,2 +1,33 @@
 <!--pages/myPublishInfoEdit/myPublishInfoEdit.wxml-->
-<text>pages/myPublishInfoEdit/myPublishInfoEdit.wxml</text>
+<form class="" bindsubmit="formSubmit" bindreset="formReset">
+<view class="publishPanel">
+<scroll-view scroll-y="true">
+    <view class="publishInfoView">
+        <view>物品名称</view>
+        <input placeholder="请输入名称 品牌型号等等" bindblur="publishNameBlur" value="小米mix"/>
+    </view>
+    <view class="publishInfoView">
+        <view>简述物品</view>
+        <textarea  placeholder="请简述您的物品" maxlength="-1" bindblur="publishDescBlur" value="ehqwiehqwiehqwiheuio"/> 
+    </view>
+    <view class="publishInfoView">
+        <view>租金</view>
+        <input placeholder="请输入租金" bindblur="publishRentBlur" value="20"/>
+    </view>
+    <view class="publishInfoView">
+        <view>押金</view>
+        <input placeholder="请输入押金" bindblur="publishPrerentBlur" value="400"/>
+    </view>
+    <view class="publishInfoView">
+        <view>联系方式</view>
+        <input placeholder="请输入您的联系方式" bindblur="publishTelBlur" value="10086"/>
+    </view>
+    <view class="PublishPicView">
+        <view>图片</view>
+        <image src="{{item}}" class="PublishPic" wx:for="{{img}}" bindlongtap="delImg" data-id="{{item}}"></image>
+        <image src="../../img/addPic.png" class="PublishPic" bindtap="addPic"></image>
+    </view>
+</scroll-view>
+</view>
+<button class="btnOnbottom" form-type="submit">确定</button>
+</form>

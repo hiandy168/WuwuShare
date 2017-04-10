@@ -1,1 +1,20 @@
 /* pages/myPublishInfoEdit/myPublishInfoEdit.wxss */
+.publishPanel{
+    margin: 10px 10px 50px 10px;
+}
+.publishInfoView{
+    margin: 10px 0;
+    padding: 3px;
+    border: 1px solid #eee;
+}
+
+.publishInfoView>textarea{
+     width: 100%;
+}
+
+.PublishPic{
+    width: 20%;
+    height: 80px;
+    margin: 5px;
+}
+

@@ -1,4 +1,4 @@
-<view class="">
+<form class="" bindsubmit="formSubmit" bindreset="formReset">
 <view class="publishPanel">
 <scroll-view scroll-y="true">
     <view class="publishInfoView">
@@ -23,5 +23,5 @@
     </view>
 </scroll-view>
 </view>
-<button bindtap="publish" class="btnOnbottom">发布</button>
-</view>
+<button class="btnOnbottom" form-type="submit">发布</button>
+</form>

@@ -20,12 +20,7 @@
     <scroll-view scroll-y="true">
         <view style="word-break:break-all;border-bottom: 1px solid #999;">3213131237923472313131319823749237493279237qewqeqwewqewqeq93479</view>
     </scroll-view>
-    <view class="detailList">
-        <image src="../../img/user_round.png" class="detailListIcon"></image>
-        <text class="classname">租用申请</text>
-        <view class="importentText" style="position:inline-block;float:right;">99+</view>
-    </view>
 </scroll-view>
 </view>
-    <button class="btnOnbottom">修改信息</button>
+    <button class="btnOnbottom" bindtap="toPublishInfoEdit">修改信息</button>
 </view>

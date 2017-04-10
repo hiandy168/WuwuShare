@@ -11,3 +11,14 @@
 .importentText{
       color: #e4393c;
 }
+
+.notifyNum{
+      color: white;
+      background: #e4393c;
+      float:right;
+      padding: 0 5px;
+      border-radius: 15px;
+      display: inline-block;
+      line-height: 30px;
+      margin-top: 5px;
+}

@@ -15,5 +15,11 @@ Page({
   },
   onUnload:function(){
     // 页面关闭
+  },
+  // 去编辑页面
+  toPublishInfoEdit:function(){
+    wx.navigateTo({
+      url: '../myPublishInfoEdit/myPublishInfoEdit',
+    })
   }
 })

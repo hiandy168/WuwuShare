@@ -11,11 +11,12 @@
   <view class="shareTh"  bindtap="toDetail" wx:for="{{listData}}" data-itemid= "{{item.id}}">
     <view class="" style="display:none">{{item}}</view>
     <image src="{{item.img}}"></image>
-    <text>{{item.name}}</text>
-    <text>押金：{{item.rent}}积分</text>
-    <text>租金：{{item.preRent}}/天</text>
+    <view>{{item.name}}</view>
+    <text>押金：<text class="importentText">{{item.rent}}</text>积分</text>
+    <text class="rentText">租金：<text class="importentText">{{item.preRent}}</text>/天</text>
+    <view class="">距离您xx公里</view>
   </view>
 </view>
-
+<view class="indexEnd">已经到底咯 0.0</view>
 </scroll-view>
 </view>

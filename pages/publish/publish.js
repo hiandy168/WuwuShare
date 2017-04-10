@@ -68,12 +68,16 @@ Page({
     })  
   },
   //发布
-  publish:function(){
+  formSubmit:function(event){
+    console.log( event.detail.value);
     console.log(this.data);
     wx.showModal({
       title:"提交数据",
       content:"名称："+this.data.name
     })
+  },
+  formReset:function(){
+    
   },
   delImg:function(event){
     var that = this;
