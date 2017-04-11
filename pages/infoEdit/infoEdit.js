@@ -57,17 +57,8 @@ Page({
   //保存信息
   saveEdit:function(){
 
-     wx.redirectTo({
-       url: '../userInfo/userInfo',
-       success: function(res){
-         // success
-       },
-       fail: function(res) {
-         // fail
-       },
-       complete: function(res) {
-         // complete
-       }
+     wx.navigateBack({
+       delta: 2, // 回退前 delta(默认为1) 页面
      })
 
   }

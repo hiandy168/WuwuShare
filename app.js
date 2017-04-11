@@ -24,7 +24,8 @@ App({
       age:"21",
       address:"江西省南昌市华东交通大学",
       sex:"男",
-      tel:"10086"
-    }
+      tel:"10086",
+    },
+    isLogin:false
   }
 })

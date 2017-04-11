@@ -1,0 +1,34 @@
+/* pages/login/login.wxss */
+input{
+    height: 2.4em;
+    border-bottom: 1px solid #ccc;
+}
+
+image{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.imgContent{
+    text-align: center;
+}
+
+button{
+    margin: 10px 0;
+}
+
+.textLeft{
+    float: left;
+    color: #26a6f2;
+}
+
+.textRight{
+    float: right;
+    color: #e4393c;
+}
+
+#loginBtn{
+    color: white;
+    background: #fdd344;
+}

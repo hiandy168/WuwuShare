@@ -1,0 +1,9 @@
+/* pages/regester/regester.wxss */
+input{
+    height: 2.4em;
+    border-bottom: 1px solid #ccc;
+}
+
+button{
+    margin-top: 10px;
+}

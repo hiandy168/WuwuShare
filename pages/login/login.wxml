@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class="content">
+    <view class="imgContent">
+        <image src="../../img/logo.png"></image>
+    </view>
+    <form bindsubmit="LoginSubmit" bindreset="LoginReset">
+    
+        <input name="username" placeholder="用户民" />
+        <input name="password" placeholder="密码" />
+
+        <button form-type="submit" id="loginBtn">登陆</button>
+        <text class="textLeft" bindtap="toRegester">注册</text><text class="textRight">忘记密码？</text>
+    </form>
+</view>

@@ -33,5 +33,14 @@ Page({
       wx.navigateTo({
         url: '../myRent/myRent',
       })
+  },
+//   到登陆界面
+  toLogin:function(){
+      var isLogin=app.globalData.isLogin;
+      if(isLogin==false){
+        wx.navigateTo({
+          url: '../login/login',
+        })
+      }
   }
 })

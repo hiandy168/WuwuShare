@@ -8,6 +8,9 @@ Page({
     rent:"",
     preRent:"",
     rel:"",
+    address:"",
+    longitude:"",
+    latitude:"",
     img:[]
   },
   // 初始化
@@ -97,6 +100,24 @@ Page({
             }
           }
         }
+      }
+    })
+  },
+  toMap:function(){
+    var that = this;
+    wx.chooseLocation({
+      success: function(res){
+        that.setData({
+          address:res.address,
+          longitude:res.longitude,
+          latitude:res.latitude
+        })
+      },
+      fail: function(res) {
+        // fail
+      },
+      complete: function(res) {
+        // complete
       }
     })
   }

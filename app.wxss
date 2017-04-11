@@ -22,3 +22,7 @@
       line-height: 30px;
       margin-top: 5px;
 }
+
+.content{
+      margin: 10px;
+}
