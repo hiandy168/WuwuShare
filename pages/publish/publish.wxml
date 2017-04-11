@@ -2,20 +2,20 @@
 <view class="publishPanel">
 <scroll-view scroll-y="true">
     <view class="publishInfoView">
-        <input placeholder="请输入名称 品牌型号等等" bindblur="publishNameBlur" name="title"/>
+        <input placeholder="请输入名称 品牌型号等等"  name="title"/>
     </view>
     <view class="publishInfoView">
-        <textarea  placeholder="请简述您的物品" maxlength="-1" bindblur="publishDescBlur" name="desc"/> 
+        <textarea  placeholder="请简述您的物品" maxlength="-1"  name="desc"/> 
     </view>
     <view class="publishInfoView">
-        <input placeholder="请输入租金" bindblur="publishRentBlur" name="rent"/>
+        <input placeholder="请输入租金"  name="rent"/>
     </view>
         <view class="publishInfoView">
-        <input placeholder="请输入押金" bindblur="publishPrerentBlur" name="deposit"/>
+        <input placeholder="请输入押金"  name="deposit"/>
     </view>
     <view class="publishInfoView">
     <button bindtap="toMap" type="primary" style="margin：10px 0">点击快速找到地址</button>
-        <input placeholder="物品发布地址" bindblur="publishTelBlur" value="{{address}}" name="address"/>
+        <input placeholder="物品发布地址"  value="{{address}}" name="address"/>
     </view>
     <text style="color:#333">请添加至少一张图片</text>
     <view class="PublishPicView">
