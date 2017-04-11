@@ -11,7 +11,8 @@
     "pages/myPublishInfo/myPublishInfo",
     "pages/myPublishInfoEdit/myPublishInfoEdit",
     "pages/login/login",
-    "pages/regester/regester"
+    "pages/regester/regester",
+    "pages/notify/notify"
   ],
   "window":{
     "backgroundTextStyle":"light",

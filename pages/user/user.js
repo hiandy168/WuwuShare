@@ -42,5 +42,10 @@ Page({
           url: '../login/login',
         })
       }
+  },
+  toNotify:function(){
+    wx.navigateTo({
+      url: '../notify/notify',
+    })
   }
 })

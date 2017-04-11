@@ -4,7 +4,7 @@
 
 <view class="searchInputView">
     <image src="../../img/search.png"></image>
-  <input placeholder="请输入所需物品名称" confirm-type="search" class="searchInput" placeholder-class="searchPlaceholder"/>
+  <input placeholder="请输入所需物品名称" confirm-type="search" class="searchInput" placeholder-class="searchPlaceholder" bindconfirm="searchconfirm"/>
 </view>
 
 <view class="indexSharePanel">

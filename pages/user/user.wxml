@@ -2,6 +2,7 @@
 <view class="userHeader">
     <image src="../../img/user.png"></image>
     <view class="username" bindtap="toLogin">{{username}}</view>
+    <view class="username" bindtap="toLogin">{{}}</view>
 </view>
     
 <scroll-view scroll-y="true" class="userPageListPanel">
@@ -22,9 +23,9 @@
         <text class="">我的积分</text><text style="float:right;color:#e4393c">{{count}}</text>
         <image src="../../img/points.png" style="float:right;width:40px;height:40px;padding-right:3px"></image>
     </view>
-    <view class="userPageList">
+    <view class="userPageList" bindtap="toNotify">
         <image src="../../img/msg.png" class="userListIcon"></image>
-        <text class="">我的消息</text><view class="notifyNum">99+</view>
+        <text class="">消息中心</text><view class="notifyNum">99+</view>
     </view>
 </scroll-view>
 </view>

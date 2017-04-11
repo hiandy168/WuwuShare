@@ -60,5 +60,9 @@ Page({
    wx.navigateTo({
           url: '../detail/detail?itemid='+itemid,
         })
+  },
+  // 搜索框输入完成
+  searchconfirm:function(event){
+    console.log(event.detail.value);
   }
 })

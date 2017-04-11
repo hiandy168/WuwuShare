@@ -20,6 +20,7 @@
     <text style="color:#333">请添加至少一张图片</text>
     <view class="PublishPicView">
         <image src="{{item}}" class="PublishPic" wx:for="{{img}}" bindlongtap="delImg" data-id="{{item}}"></image>
+
         <image src="../../img/addPic.png" class="PublishPic" bindtap="addPic"></image>
     </view>
 </scroll-view>
