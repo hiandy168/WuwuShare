@@ -17,41 +17,6 @@ Page({
   onLoad: function () {
     
   },
-  publishNameBlur:function(event){
-      var name = event.detail.value;
-      this.setData({
-        name:name
-      })
-      console.log(this.data.name);
-  },
-  publishDescBlur:function(event){
-      var desc = event.detail.value;
-      this.setData({
-        desc:desc
-      })
-       console.log(this.data.desc);
-  },
-  publishRentBlur:function(event){
-  var rent = event.detail.value;
-        this.setData({
-          rent:rent
-        })
-         console.log(this.data.rent);
-  },
-  publishPrerentBlur:function(event){
-       var preRent = event.detail.value;
-      this.setData({
-        preRent:preRent
-      })
-       console.log(this.data.preRent);
-  },
-  publishTelBlur:function(event){
-      var tel = event.detail.value;
-      this.setData({
-        tel:tel
-      })
-       console.log(this.data.tel);
-  },
   // 添加图片
   addPic:function(){
       var that = this;  
@@ -73,11 +38,6 @@ Page({
   //发布
   formSubmit:function(event){
     console.log( event.detail.value);
-    console.log(this.data);
-    wx.showModal({
-      title:"提交数据",
-      content:"名称："+this.data.name
-    })
   },
   formReset:function(){
     
