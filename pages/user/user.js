@@ -13,10 +13,11 @@ Page({
     console.log(app.globalData.userInfo);
   },
   onShow:function(){
-        username:app.globalData.userInfo.name
+      this.setData({
+          username:app.globalData.userInfo.name
+      })
   },
   onHide:function(){
-        username:app.globalData.userInfo.name
   },
   //跳转到用户信息
   toUserInfo:function(){
