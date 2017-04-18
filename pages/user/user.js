@@ -2,19 +2,22 @@
 var app = getApp()
 Page({
   data: {
-      username:app.globalData.userInfo.name,
-      count:'400',
+      nickname:app.data.userInfo.nickname,
   },
   // 初始化
   onLoad: function () {
+    console.log(app);
+    console.log(this);
       this.setData({
-          username:app.globalData.userInfo.name
+          nickname:app.data.userInfo.nickname,
       })
-    console.log(app.globalData.userInfo);
+    // console.log(app.globalData.userInfo);
   },
   onShow:function(){
+    console.log(app);
+    console.log(this);
       this.setData({
-          username:app.globalData.userInfo.name
+          nickname:app.data.userInfo.nickname,
       })
   },
   onHide:function(){
@@ -37,7 +40,7 @@ Page({
   },
 //   到登陆界面
   toLogin:function(){
-      var isLogin=app.globalData.isLogin;
+      var isLogin=app.data.isLogin;
       if(isLogin==false){
         wx.navigateTo({
           url: '../login/login',

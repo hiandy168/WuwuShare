@@ -1,13 +1,12 @@
 //获取应用实例
 var app = getApp()
+
 Page({
   data: {
-    count:'400',
-    name:"",
+    title:"",
     desc:"",
     rent:"",
-    preRent:"",
-    rel:"",
+    deposit:"",
     address:"",
     longitude:"",
     latitude:"",
@@ -38,7 +37,69 @@ Page({
   },
   //发布
   formSubmit:function(event){
-    console.log( event.detail.value);
+    console.log(event.detail.value);
+    var that = this;
+    var data = event.detail.value;
+    wx.uploadFile({
+      url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Good/insert',
+      filePath:that.data.img[0],
+      name:'name',
+      header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+      }, // 设置请求的 header
+      formData: {
+          // $_POST[‘title’] 物品名称
+          // $_POST[‘desc’] 物品描述
+          // $_POST[‘deposit’] 物品押金
+          // $_POST[‘rent’] 物品租金
+          // $_POST[‘latitude’] 物品纬度
+          // $_POST[‘longitude’] 物品经度
+          // $_POST[‘provide_id’] 物主的id
+          title:that.title,
+          desc:that.desc,
+          deposit:data.deposit,
+          rent:data.rent,
+          latitude:that.latitude,
+          longitude:that.longitude,
+          provide_id:81 //测试，实际用app.globalData.userInfo.id
+
+      }, // HTTP 请求中其他额外的 form data
+      success: function(res){
+        // success
+        console.log(res);
+        // 发布成功
+        if(JSON.parse(res.data).status==1){
+            wx.showToast({
+              title:"发布成功",
+              icon:"success"
+            })
+            // 清空输入
+            that.setData({
+              title:"",
+              desc:"",
+              rent:"",
+              deposit:"",
+              address:"",
+              longitude:"",
+              latitude:"",
+              img:[]
+          })
+        }
+        // 发布失败
+        else{
+          wx.showToast({
+              title:"发布失败",
+              icon:"success"
+            })
+        }
+      },
+      fail: function(res) {
+        // fail
+      },
+      complete: function(res) {
+        // complete
+      }
+    })
   },
   formReset:function(){
     

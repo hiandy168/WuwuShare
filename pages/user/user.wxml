@@ -1,7 +1,7 @@
 <view class="classname">
 <view class="userHeader">
     <image src="../../img/user.png"></image>
-    <view class="username" bindtap="toLogin">{{username}}</view>
+    <view class="username" bindtap="toLogin">{{nickname}}</view>
     <view class="username" bindtap="toLogin">{{}}</view>
 </view>
     

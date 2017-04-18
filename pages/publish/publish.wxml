@@ -2,16 +2,16 @@
 <view class="publishPanel">
 <scroll-view scroll-y="true">
     <view class="publishInfoView">
-        <input placeholder="请输入名称 品牌型号等等"  name="title"/>
+        <input placeholder="请输入名称 品牌型号等等"  name="title" value="{{title}}"/>
     </view>
     <view class="publishInfoView">
-        <textarea  placeholder="请简述您的物品" maxlength="-1"  name="desc"/> 
+        <textarea  placeholder="请简述您的物品" maxlength="-1"  name="desc" value="{{desc}}"/> 
     </view>
     <view class="publishInfoView">
-        <input placeholder="请输入租金"  name="rent"/>
+        <input placeholder="请输入租金" type="number"  name="rent" value="{{rent}}"/>
     </view>
         <view class="publishInfoView">
-        <input placeholder="请输入押金"  name="deposit"/>
+        <input placeholder="请输入押金" type="number"  name="deposit" value="{{deposit}}"/>
     </view>
     <view class="publishInfoView">
     <button bindtap="toMap" type="primary" style="margin：10px 0">点击快速找到地址</button>

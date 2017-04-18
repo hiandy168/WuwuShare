@@ -19,13 +19,18 @@ App({
     // });
   },
   globalData:{
-    userInfo:{
-      name:"jianjian",
-      age:"21",
-      address:"江西省南昌市华东交通大学",
-      sex:"男",
-      tel:"10086",
-    },
-    isLogin:false
+    serverUrl:"http://www.zjlcloud.cn/test1.0/"
+  },
+  data:{
+      userInfo:{
+        user_id:"",
+        username:"",
+        nickname:"未登录",
+        address:"",
+        latitude:"",
+        longitude:"",
+        phone:"",
+      },
+    isLogin:false,
   }
 })

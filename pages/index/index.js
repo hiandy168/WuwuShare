@@ -4,61 +4,54 @@ var app = getApp()
 Page({
   data: {
     listData:[
-      {
-          id:"1",
-          img:"../../img/shareTh.jpg",
-          name:"小米mix",
-          rent:"400",
-          preRent:"20"
-      },{
-          id:"2",
-          img:"../../img/shareTh.jpg",
-          name:"小米mix",
-          rent:"400",
-          preRent:"20"
-      },{
-        id:"3",
-          img:"../../img/shareTh.jpg",
-          name:"小米mix",
-          rent:"400",
-          preRent:"20"
-      },{
-        id:"4",
-          img:"../../img/shareTh.jpg",
-          name:"小米mix",
-          rent:"400",
-          preRent:"20"
-      },{
-        id:"5",
-          img:"../../img/shareTh.jpg",
-          name:"小米mix",
-          rent:"400",
-          preRent:"20"
-      },{
-        id:"6",
-          img:"../../img/shareTh.jpg",
-          name:"小米mix",
-          rent:"400",
-          preRent:"20"
-      }
       
-    ]
+    ],
+    serverUrl:app.globalData.serverUrl
   },
   // 初始化
   onLoad: function () {
-    
+    var that = this;
+    wx.request({
+      url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Good/select',
+      data: {},
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function(res){
+        console.log(res);
+        if(res.data.status!=1){
+          wx.showToast({
+            title:"获取数据失败"
+          })
+        }
+        if(res.data.data.length>10){
+            var data = [];
+            for(var i=0;i<10;i++){
+                data.push(res.data.data[i])
+            }
+            that.setData({
+              listData:data
+            })
+        }else{
+          that.setData({
+            listData:res.data.data
+          })
+        }
+      },
+      fail: function(res) {
+         wx.showToast({
+            title:"获取数据失败"
+          })
+      },
+      complete: function(res) {
+        // complete
+      }
+    })
   },
   toDetail:function(event){
-    console.log(event.currentTarget.dataset.itemid);
-    var itemid = event.currentTarget.dataset.itemid;
+    var good_id = event.currentTarget.dataset.good_id;
     var that = this;
-    for(var i=0;i<that.data.listData.length;i++){
-        if(that.data.listData.id==itemid){
-            console.log(that.data.listDat[i]);
-        }
-    }
    wx.navigateTo({
-          url: '../detail/detail?itemid='+itemid,
+          url: '../detail/detail?good_id='+good_id,
         })
   },
   // 搜索框输入完成

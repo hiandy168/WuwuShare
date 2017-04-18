@@ -2,17 +2,16 @@
 <view class="detailView">
 <scroll-view scroll-y="true" >
     <view class="detailPicView">
-        <image src="../../img/shareTh.jpg"></image>
+        <image src="{{serverUrl + good_info.image}}"></image>
     </view>
-    <text>租金：20/天</text><text style="margin-left:50px">押金：400</text>
+    <text>租金：<text class="importentText">{{good_info.rent}}</text>积分/天</text><text style="margin-left:50px">押金：<text class="importentText">{{good_info.deposit}}</text></text>
     <view class="detailList">
         <image src="../../img/addIcon.png" class="detailListIcon"></image>
         <text class="">距离您XXX公里</text>
     </view>
     <view class="detailList">
         <image src="../../img/thing.png" class="detailListIcon"></image>
-        <text>物品描述</text>
-        <text></text>
+        <text>{{good_info.desc}}</text>
     </view>
     <view class="detailList">
         <image src="../../img/map.png" class="detailListIcon"></image>

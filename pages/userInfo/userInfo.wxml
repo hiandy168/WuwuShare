@@ -4,16 +4,10 @@
     <scroll-view scroll-y="true" class="">
 
         <view class="userInfoList">
-            <text class="">用户名</text><text class="userInfoText">{{name}}</text>
+            <text class="">昵称</text><text class="userInfoText">{{nickname}}</text>
         </view>
         <view class="userInfoList">
-            <text class="">性别</text><text class="userInfoText">{{sex}}</text>
-        </view>
-        <view class="userInfoList">
-            <text class="">年龄</text><text class="userInfoText">{{age}}</text>
-        </view>
-        <view class="userInfoList">
-            <text class="">电话</text><text class="userInfoText">{{tel}}</text>
+            <text class="">电话</text><text class="userInfoText">{{phone}}</text>
         </view>
         <view class="userInfoList">
             <text class="">地址</text><text class="userInfoText">{{address}}</text>

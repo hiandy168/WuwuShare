@@ -2,11 +2,11 @@
 <view class="">
     <form bindsubmit="regesterSubmit">
         <view class="content">
-                <input name="username" placeholder="账号"/>
-                <input name="password1" placeholder="密码"/>
-                <input name="password2" placeholder="请再次输入密码"/>
-                <input name="nickname" placeholder="昵称"/>
-                <input name="phone" placeholder="电话号码"/>
+                <input name="username" placeholder="账号" value="{{username}}"/>
+                <input name="password" type="password" placeholder="密码" value="{{password}}"/>
+                <input name="repassword" type="password" placeholder="请再次输入密码" value="{{repassword}}"/>
+                <input name="nickname" placeholder="昵称" value="{{nickname}}"/>
+                <input name="phone" type="number" placeholder="电话号码" value="{{phone}}" maxlength="11"/>
                 <button type="primary" bindtap="toMap">点击这里快速找到地址</button>
                 <input name="address" placeholder="地址" value="{{address}}" style="word-break:break-all;"/>
         </view>

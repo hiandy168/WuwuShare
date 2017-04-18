@@ -3,22 +3,25 @@ var app = getApp();
 
 Page({
   data:{
-    name:"",
-    sex:"",
-    age:"",
-    tel:"",
+    nickname:"",
+    phone:"",
     address:""
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
     this.setData({
-      name:app.globalData.userInfo.name,
-      sex:app.globalData.userInfo.sex,
-      age:app.globalData.userInfo.age,
-      tel:app.globalData.userInfo.tel,
-      address:app.globalData.userInfo.address
+      nickname:app.data.userInfo.nickname,
+      phone:app.data.userInfo.phone,
+      address:app.data.userInfo.address,
     })
-    console.log(this.data);
+    // console.log(this.data);
+  },
+  onShow:function(){
+    this.setData({
+      nickname:app.data.userInfo.nickname,
+      phone:app.data.userInfo.phone,
+      address:app.data.userInfo.address,
+    })
   },
   toEditInfo:function(){
       wx.navigateTo({
