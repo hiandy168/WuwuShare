@@ -20,7 +20,7 @@
     </view>
     <view class="userPageList">
         <image src="../../img/countIcon.png" class="userListIcon"></image>
-        <text class="">我的积分</text><text style="float:right;color:#e4393c">{{count}}</text>
+        <text class="">我的积分</text><text style="float:right;color:#e4393c">{{deposit}}</text>
         <image src="../../img/points.png" style="float:right;width:40px;height:40px;padding-right:3px"></image>
     </view>
     <view class="userPageList" bindtap="toNotify">

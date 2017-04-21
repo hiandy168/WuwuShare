@@ -3,9 +3,7 @@
 var app = getApp()
 Page({
   data: {
-    listData:[
-      
-    ],
+    listData:[],
     serverUrl:app.globalData.serverUrl
   },
   // 初始化
@@ -25,7 +23,7 @@ Page({
         }
         if(res.data.data.length>10){
             var data = [];
-            for(var i=0;i<10;i++){
+            for(var i=res.data.data.length-1;i>res.data.data.length-10;i--){
                 data.push(res.data.data[i])
             }
             that.setData({
@@ -56,6 +54,25 @@ Page({
   },
   // 搜索框输入完成
   searchconfirm:function(event){
-    console.log(event.detail.value);
+    // console.log(event.detail.value);
+    var that =this;
+    wx.request({
+      url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Good/find',
+      data: {
+        keywords:event.detail.value
+      },
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function(res){
+        // success
+        console.log(res);
+        that.setData({
+          listData:res.data.data
+        })
+      },
+      fail: function(res) {
+        // fail
+      }
+    })
   }
 })

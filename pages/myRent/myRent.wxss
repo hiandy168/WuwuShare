@@ -3,14 +3,15 @@
     margin: 10px 10px 0 10px;
 }
 .MyRentList{
-    height: 80px;
+    height: 100px;
     background: #eee;
     margin-bottom: 5px;
+    padding-left: 10px;
 }
 
 .mrlRight>image{
-    height: 80px;
-    width: 100px;
+    height: 100px;
+    width: 120px;
 }
 
 .mrlLeft{
@@ -35,4 +36,5 @@
     color: #fff;
     background: #e4393c;
     border-radius: 4px;
+    margin-top: 10px;
 }

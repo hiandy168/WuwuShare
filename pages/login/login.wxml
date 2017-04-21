@@ -6,7 +6,7 @@
     <form bindsubmit="LoginSubmit" bindreset="LoginReset">
     
         <input name="username" placeholder="用户民" value="{{username}}"/>
-        <input name="password" placeholder="密码" value="{{password}}"/>
+        <input name="password" placeholder="密码" value="{{password}}" type="password"/>
 
         <button form-type="submit" id="loginBtn">登陆</button>
         <text class="textLeft" bindtap="toRegester">注册</text>

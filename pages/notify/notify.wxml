@@ -2,13 +2,13 @@
 <view class="content">
     <scroll-view scroll-y="true">
 
-         <view class="notifyList" bindtap="showModal" data-title="XX正在申请租用您的XXX" data-content="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx">
+         <view wx:for="{{messageList}}" class="notifyList" bindtap="notifyTap" data-msgid="{{item.message_id}}" data-url="{{item.url}}">
             <view class="nlLeft">
                 <image src="../../img/redTui.png"></image>
             </view>
             <view class="nlRight">
-                <view >XX正在申请租用您的XXX</view>
-                <view >xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+                <view id="title">{{item.title}}</view>
+                <view id="content">{{item.content}}</view>
             </view>
         </view>
 

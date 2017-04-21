@@ -4,49 +4,16 @@
 
     <scroll-view scroll-y="true">
 
-        <view class="MyPublishList" bindtap="toPublishInfo">
-            <view class="mplLeft">
-                <view>小米mix</view>
-                <view>押金:<text>400</text></view>
-                <view>租金:<text>20</text>/天</view>
+        <view class="MyPublishList" bindtap="toPublishInfo" wx:for="{{myPublishList}}" data-goodid="{{item.good_id}}">
+           <view class="mplLeft">
+                <view>押金:<text class="importentText">{{item.deposit}}</text>积分</view>
+                <view>租金:<text class="importentText">{{item.rent}}</text>积分/天</view>
             </view>
             <view class="mplRight">
-                <image src="../../img/shareTh.jpg"></image>
+                <image src="{{serverUrl + item.image}}"></image>
             </view>
         </view>
 
-        <view class="MyPublishList">
-            <view class="mplLeft">
-                <view>小米mix</view>
-                <view>押金:<text>400</text></view>
-                <view>租金:<text>20</text>/天</view>
-            </view>
-            <view class="mplRight">
-                <image src="../../img/shareTh.jpg"></image>
-            </view>
-        </view>
-
-        <view class="MyPublishList">
-            <view class="mplLeft">
-                <view>小米mix</view>
-                <view>押金:<text>400</text></view>
-                <view>租金:<text>20</text>/天</view>
-            </view>
-            <view class="mplRight">
-                <image src="../../img/shareTh.jpg"></image>
-            </view>
-        </view>
-
-       <view class="MyPublishList">
-            <view class="mplLeft">
-                <view>小米mix</view>
-                <view>押金:<text>400</text></view>
-                <view>租金:<text>20</text>/天</view>
-            </view>
-            <view class="mplRight">
-                <image src="../../img/shareTh.jpg"></image>
-            </view>
-        </view>
     </scroll-view>
 
 </view>

@@ -3,30 +3,30 @@
 <view class="detailView">
 <scroll-view scroll-y="true" >
     <view class="detailPicView">
-        <image src="../../img/shareTh.jpg"></image>
+        <image src="{{serverUrl + image}}"></image>
     </view>
     <view class="detailList">
         <image src="../../img/PreRent.png" class="detailListIcon"></image>
-        <text>租金：</text><text>20</text><text>/天</text>
+        <text>租金：</text><text class="importentText">{{rent}}</text><text>积分/天</text>
     </view>
     <view class="detailList">
         <image src="../../img/Rent.png" class="detailListIcon"></image>
-        <text class="classname">押金：</text><text>400</text>
+        <text class="classname">押金：</text><text class="importentText">{{deposit}}</text>积分
     </view>
     <view class="descItem">
         <image src="../../img/thing.png" class="detailListIcon"></image>
         <text class="classname">物品描述：</text>
     </view>
     <scroll-view scroll-y="true">
-        <view style="word-break:break-all;border-bottom: 1px solid #999;">3213131237923472313131319823749237493279237qewqeqwewqewqeq93479</view>
+        <view style="word-break:break-all;border-bottom: 1px solid #999;">{{desc}}</view>
     </scroll-view>
-     <view class="detailList">
+     <view class="detailList" >
         <image src="../../img/Rent.png" class="detailListIcon"></image>
-        <text class="classname">租用状态:</text><text>{{}}</text>
+        <text class="classname">租用状态:</text><text class="importentText">{{status==0?"未租出":"已租出"}}</text>
     </view>
-    <view class="detailList">
+    <view class="detailList" wx:if="{{accept_id==0}}">
         <image src="../../img/PreRent.png" class="detailListIcon"></image>
-        <text class="classname">租用人：</text><text>{{}}</text>
+        <text class="classname">租用人：</text><text>{{accept_id}}</text>
         <view class=""></view>
         <image src="../../img/PreRent.png" class="detailListIcon"></image>
         <text class="classname">联系方式：</text><text>{{}}</text>

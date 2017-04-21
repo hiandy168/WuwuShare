@@ -1,3 +1,5 @@
+var app = getApp();
+
 function formatTime(date) {
   var year = date.getFullYear()
   var month = date.getMonth() + 1
@@ -16,6 +18,11 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+function isLogin(){
+  return app.data.isLogin?true:false;
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  isLogin:isLogin
 }

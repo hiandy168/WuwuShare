@@ -30,6 +30,7 @@ App({
         latitude:"",
         longitude:"",
         phone:"",
+        deposit:""
       },
     isLogin:false,
   }

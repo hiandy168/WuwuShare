@@ -47,6 +47,7 @@ Page({
           // 存储用户信息
           var userData = res.data.data;
           app.data.userInfo.user_id=userData.user_id;
+          app.data.userInfo.deposit=userData.deposit;
           app.data.userInfo.username=userData.username;
           app.data.userInfo.nickname=userData.nickname;
           app.data.userInfo.address=userData.address;

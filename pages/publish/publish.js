@@ -1,4 +1,5 @@
 //获取应用实例
+var util = require("../../utils/util.js");
 var app = getApp()
 
 Page({
@@ -37,6 +38,14 @@ Page({
   },
   //发布
   formSubmit:function(event){
+    // 判断登录状态
+        if(!util.isLogin()){
+          wx.showToast({
+            title:"您还未登陆"
+          })
+          return;
+        }
+     // 处于登陆状态
     console.log(event.detail.value);
     var that = this;
     var data = event.detail.value;
@@ -55,13 +64,13 @@ Page({
           // $_POST[‘latitude’] 物品纬度
           // $_POST[‘longitude’] 物品经度
           // $_POST[‘provide_id’] 物主的id
-          title:that.title,
-          desc:that.desc,
+          title:data.title,
+          desc:data.desc,
           deposit:data.deposit,
           rent:data.rent,
           latitude:that.latitude,
           longitude:that.longitude,
-          provide_id:81 //测试，实际用app.globalData.userInfo.id
+          provide_id:app.data.userInfo.user_id //测试，实际用app.globalData.userInfo.id
 
       }, // HTTP 请求中其他额外的 form data
       success: function(res){

@@ -1,8 +1,7 @@
 /* pages/notify/notify.wxss */
 .notifyList{
     background: #eee;
-    height: 40px;
-    padding: 10px;
+    height: 80px;
 }
 
 .nlLeft{
@@ -10,14 +9,20 @@
 }
 
 .nlRight{
-    float:left; 
+    padding: 5px;
 }
 
 .nlLeft>image{
-    height: 40px;
-    width: 40px;
-    margin:0 10px 0 0;
+    height: 80px;
+    width: 100px;
 }
 
+#title{
+    font-size: 1em;
+}
 
+#content{
+    font-size:0.8em;
+    white-space: pre-line;
+}
 
