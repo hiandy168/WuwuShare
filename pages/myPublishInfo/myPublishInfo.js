@@ -10,7 +10,9 @@ Page({
     accept_id:0,
     image:"",
     serverUrl:app.globalData.serverUrl,
-    good_id:""
+    good_id:"",
+    accept_nickname:"",
+    accept_phone:""
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -46,7 +48,26 @@ Page({
         // fail
       },
       complete: function(res) {
-        // complete
+        wx.request({
+          url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/User/getUserById',
+          data: {
+            id:that.data.accept_id
+          },
+          method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+          // header: {}, // 设置请求的 header
+          success: function(res){
+            console.log(res);
+            if(res.data.status==1){
+              that.setData({
+                accept_nickname:res.data.data.nickname,
+                accept_phone:res.data.data.phone       
+              })
+            }
+          },
+          fail: function(res) {
+            // fail
+          }
+        })
       }
     })
   },

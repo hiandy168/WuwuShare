@@ -7,7 +7,7 @@
     <text>租金：<text class="importentText">{{rent}}</text>积分/天</text><text style="margin-left:50px">押金：<text class="importentText">{{deposit}}</text></text>
     <view class="detailList">
         <image src="../../img/addIcon.png" class="detailListIcon"></image>
-        <text class="">距离您XXX公里</text>
+        <text class="">距离您 {{dist}} km</text>
     </view>
     <view class="detailList">
         <image src="../../img/thing.png" class="detailListIcon"></image>

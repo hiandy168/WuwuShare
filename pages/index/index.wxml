@@ -8,12 +8,12 @@
 </view>
 
 <view class="indexSharePanel">
-  <view class="shareTh"  bindtap="toDetail"  wx:for="{{listData}}" data-good_id= "{{item.good_id}}">
+  <view class="shareTh"  bindtap="toDetail"  wx:for="{{listData}}" data-good_id= "{{item.good_id}}" data-dist="{{item.dist}}">
     <image src="{{serverUrl + item.image}}"></image>
     <view>{{item.title}}</view>
     <text>押金：<text class="importentText">{{item.deposit}}</text>积分</text>
     <text class="rentText">租金：<text class="importentText">{{item.rent}}</text>积分/天</text>
-    <view class="">距离您0.3公里</view>
+    <view class="">距离您 {{item.dist}} km</view>
   </view>
 </view>
 <view class="indexEnd">已经到底咯 0.0</view>

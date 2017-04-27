@@ -24,12 +24,12 @@
         <image src="../../img/Rent.png" class="detailListIcon"></image>
         <text class="classname">租用状态:</text><text class="importentText">{{status==0?"未租出":"已租出"}}</text>
     </view>
-    <view class="detailList" wx:if="{{accept_id==0}}">
+    <view class="detailList" wx:if="{{accept_id!=0}}">
         <image src="../../img/PreRent.png" class="detailListIcon"></image>
-        <text class="classname">租用人：</text><text>{{accept_id}}</text>
+        <text class="classname">租用人：</text><text>{{accept_nickname}}</text>
         <view class=""></view>
         <image src="../../img/PreRent.png" class="detailListIcon"></image>
-        <text class="classname">联系方式：</text><text>{{}}</text>
+        <text class="classname">联系方式：</text><text>{{accept_phone}}</text>
     </view>
 </scroll-view>
 </view>

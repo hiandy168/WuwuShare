@@ -4,7 +4,7 @@
 
          <view wx:for="{{messageList}}" class="notifyList" bindtap="notifyTap" data-msgid="{{item.message_id}}" data-url="{{item.url}}">
             <view class="nlLeft">
-                <image src="../../img/redTui.png"></image>
+                <image src="../../img/message.png"></image>
             </view>
             <view class="nlRight">
                 <view id="title">{{item.title}}</view>

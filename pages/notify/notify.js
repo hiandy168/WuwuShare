@@ -26,32 +26,32 @@ Page({
             serverUrl:app.globalData.serverUrl
           })
           //获取图片
-          for(var i=0;i<data.length;i++){
-            console.log(data[i]);
-            wx.request({
-              url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Good/select',
-              data: {
-                id:data[i].good_id
-              },
-              method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-              // header: {}, // 设置请求的 header
-              success: function(res){
-                console.log(res.data.data.image);
-                // var img = that.data.image.push();
-                // console.log(img);
-                that.setData({
-                  image:that.data.image.push(res.data.data.image+"")
-                })
-                console.log(that.data.image);
-              },
-              fail: function(res) {
-                // fail
-              },
-              complete: function(res) {
-                // complete
-              }
-            })
-          }
+          // for(var i=0;i<data.length;i++){
+          //   console.log(data[i]);
+          //   wx.request({
+          //     url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Good/select',
+          //     data: {
+          //       id:data[i].good_id
+          //     },
+          //     method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+          //     // header: {}, // 设置请求的 header
+          //     success: function(res){
+          //       console.log(res.data.data.image);
+          //       // var img = that.data.image.push();
+          //       // console.log(img);
+          //       that.setData({
+          //         image:that.data.image.push(res.data.data.image+"")
+          //       })
+          //       console.log(that.data.image);
+          //     },
+          //     fail: function(res) {
+          //       // fail
+          //     },
+          //     complete: function(res) {
+          //       // complete
+          //     }
+          //   })
+          // }
         }
       },
       fail: function(res) {
@@ -94,7 +94,12 @@ Page({
               // header: {}, // 设置请求的 header
               success: function(res){
                 // success
-                console.log(res);
+                var data=res.data.data;
+                // if(data.status==1){
+                  wx.showToast({
+                    title:data.message
+                  })
+                // }
               },
               fail: function(res) {
                 // fail
@@ -103,15 +108,22 @@ Page({
           break;
           // 拒绝
           case 1:
-            wx.request({
-              url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Message/message_rent',
+           wx.request({
+              url: 'http://www.zjlcloud.cn/test1.0/index.php/'+dataset.url,
               data: {
-                action:0
+                action:0,
+                id:dataset.msgid
               },
               method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
               // header: {}, // 设置请求的 header
               success: function(res){
                 // success
+                var data=res.data.data;
+                // if(data.status==1){
+                  wx.showToast({
+                    title:data.message
+                  })
+                // }
               },
               fail: function(res) {
                 // fail
@@ -121,14 +133,21 @@ Page({
           // 删除消息
           case 2:
           wx.request({
-              url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Message/message_rent',
+              url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Message/delete',
               data: {
-                action:1
+                id:dataset.msgid
               },
               method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
               // header: {}, // 设置请求的 header
               success: function(res){
                 // success
+                console.log(res);
+                var data=res.data.data;
+                if(data.status==1){
+                  wx.showToast({
+                    title:data.message
+                  })
+                }
               },
               fail: function(res) {
                 // fail
@@ -136,8 +155,27 @@ Page({
             })
           break;
           // 设为已读
-          case 3:;
-          brea;
+          case 3:
+           wx.request({
+              url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Message/readed',
+              data: {
+                id:dataset.msgid
+              },
+              method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+              // header: {}, // 设置请求的 header
+              success: function(res){
+                // success
+                console.log(res);
+                var data=res.data.data;
+                  wx.showToast({
+                    title:data.message
+                  })
+              },
+              fail: function(res) {
+                // fail
+              }
+            })
+          break;
         }
       }
     })

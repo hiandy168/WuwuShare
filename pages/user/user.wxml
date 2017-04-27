@@ -25,7 +25,7 @@
     </view>
     <view class="userPageList" bindtap="toNotify">
         <image src="../../img/msg.png" class="userListIcon"></image>
-        <text class="">消息中心</text><view class="notifyNum">99+</view>
+        <text class="">消息中心</text><view class="notifyNum">{{notifyNum}}</view>
     </view>
 </scroll-view>
 </view>

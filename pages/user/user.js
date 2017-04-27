@@ -4,7 +4,8 @@ var app = getApp()
 Page({
   data: {
       nickname:app.data.userInfo.nickname,
-      deposit:app.data.userInfo.deposit
+      deposit:app.data.userInfo.deposit,
+      notifyNum:""
   },
   // 初始化
   onLoad: function () {
@@ -17,11 +18,35 @@ Page({
     // console.log(app.globalData.userInfo);
   },
   onShow:function(){
-    console.log(app);
-    console.log(this);
+    // console.log(app);
+    // console.log(this);
+    var that = this;
       this.setData({
           nickname:app.data.userInfo.nickname,
           deposit:app.data.userInfo.deposit
+      })
+      // 获取消息
+      wx.request({
+        url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Message/getMessage',
+        data: {
+          id:app.data.userInfo.user_id
+        },
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        // header: {}, // 设置请求的 header
+        success: function(res){
+          // success
+          if(res.data.status==1){
+            that.setData({
+              notifyNum:res.data.data.length
+            })
+          }
+        },
+        fail: function(res) {
+          // fail
+        },
+        complete: function(res) {
+          // complete
+        }
       })
   },
   onHide:function(){

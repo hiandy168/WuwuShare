@@ -11,16 +11,19 @@ Page({
       longitude:"",
       latitude:"",
       address:"",
-      phone:""
+      phone:"",
+      dist:0
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
-    // console.log(options);
+    console.log(options);
     var that = this;
     if(options.good_id){
         wx.request({
           url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Good/select',
-          data: {id:options.good_id},
+          data: {
+            id:options.good_id
+            },
           method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
           // header: {}, // 设置请求的 header
           success: function(res){
@@ -41,7 +44,8 @@ Page({
                 longitude:data.longitude,
                 latitude:data.latidude,
                 address:data.address,
-                phone:data.phone
+                phone:data.phone,
+                dist:options.dist
             })
 
           },

@@ -4,14 +4,14 @@
 
     <scroll-view scroll-y="true">
 
-        <view class="MyRentList">
+        <view class="MyRentList" wx:for="{{myRentList}}">
             <view class="mrlLeft">
-                <view>小米mix</view>
-                <view>应付积分:<text>400</text></view>
-                <view class="unRentBtn" bindtap="unRent">申请退租</view>
+                <view>{{item.title}}</view>
+                <view>应付积分:<text>{{}}</text></view>
+                <view class="unRentBtn" bindtap="unRent" data-goodid="{{item.good_id}}">申请退租</view>
             </view>
             <view class="mrlRight">
-                <image src="../../img/shareTh.jpg"></image>
+                <image src="{{serverUrl + item.image}}"></image>
             </view>
         </view>
 

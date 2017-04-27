@@ -46,9 +46,10 @@ Page({
           return;
         }
      // 处于登陆状态
-    console.log(event.detail.value);
+    // console.log(event.detail.value);
     var that = this;
     var data = event.detail.value;
+    console.log(that);
     wx.uploadFile({
       url: 'http://www.zjlcloud.cn/test1.0/index.php/Home/Good/insert',
       filePath:that.data.img[0],
@@ -57,13 +58,6 @@ Page({
           "Content-Type": "application/x-www-form-urlencoded"
       }, // 设置请求的 header
       formData: {
-          // $_POST[‘title’] 物品名称
-          // $_POST[‘desc’] 物品描述
-          // $_POST[‘deposit’] 物品押金
-          // $_POST[‘rent’] 物品租金
-          // $_POST[‘latitude’] 物品纬度
-          // $_POST[‘longitude’] 物品经度
-          // $_POST[‘provide_id’] 物主的id
           title:data.title,
           desc:data.desc,
           deposit:data.deposit,
@@ -83,16 +77,16 @@ Page({
               icon:"success"
             })
             // 清空输入
-            that.setData({
-              title:"",
-              desc:"",
-              rent:"",
-              deposit:"",
-              address:"",
-              longitude:"",
-              latitude:"",
-              img:[]
-          })
+          //   that.setData({
+          //     title:"",
+          //     desc:"",
+          //     rent:"",
+          //     deposit:"",
+          //     address:"",
+          //     longitude:"",
+          //     latitude:"",
+          //     img:[]
+          // })
         }
         // 发布失败
         else{
@@ -104,15 +98,10 @@ Page({
       },
       fail: function(res) {
         // fail
-      },
-      complete: function(res) {
-        // complete
       }
     })
   },
-  formReset:function(){
-    
-  },
+  // 删除图片
   delImg:function(event){
     var that = this;
     wx.showModal({
@@ -146,13 +135,11 @@ Page({
           longitude:res.longitude,
           latitude:res.latitude
         })
+        console.log(that);
       },
       fail: function(res) {
         // fail
       },
-      complete: function(res) {
-        // complete
-      }
     })
   }
 })

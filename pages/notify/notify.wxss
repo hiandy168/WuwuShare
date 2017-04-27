@@ -2,10 +2,12 @@
 .notifyList{
     background: #eee;
     height: 80px;
+    margin-bottom: 10px;
 }
 
 .nlLeft{
     float: left;
+    padding: 10px;
 }
 
 .nlRight{
@@ -13,8 +15,8 @@
 }
 
 .nlLeft>image{
-    height: 80px;
-    width: 100px;
+    height: 60px;
+    width: 80px;
 }
 
 #title{
